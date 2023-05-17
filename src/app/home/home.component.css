@@ -1,0 +1,203 @@
+.mainappdiv{
+    background: url(https://assets.website-files.com/60e7f71b22c6d0b9cf329ceb/621e1a2f28ded71ee95aeede_6ProvenSalesForecastingMethodstoDriveRevenue1_a117440b5ae227c3dba5264a6521da06_2000.png) no-repeat;
+    height: 100vh;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+.Mainhome{
+    /*background: hsla(208, 68%, 22%, 0.50) ;*/
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+    height: 100%;
+}
+.tophome{
+    display: grid;
+    grid-template-columns: auto 0.1fr;
+    background: rgb(122, 16, 96);
+    height: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logoutdiv{
+    position: relative;
+    /* display: flex; */
+    /* grid-template-columns: auto auto; */
+}
+/* .logoutdiv span{
+    position: absolute;
+    left:0px;
+    bottom: 0px;
+} */
+.logoutdiv button{
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+}
+.tophome p{
+    margin: auto 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    /* text-align: center; */
+    color: azure;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;   
+    /* background: hsla(208, 68%, 22%, 0.50) ; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;  
+    color: hsla(400, 59%, 65%, 1); 
+    /* background: hsla(208, 68%, 22%, 0.50) ; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+.rescontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;  
+    color: hsla(400, 59%, 65%, 1); 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.spinergrid{
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    min-width: 500px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.cardgrid{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.fileupld{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.fileupld button{
+    height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.selectValue select{
+    width: 100%;
+    height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.periodicity select{
+    width: 100%;
+    height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.preditbutn{
+    display: grid;
+    grid-template-columns: auto auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.preditbutn button{
+    margin-top: 20px;
+    width: 175%;
+    height: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(122, 16, 96);
+    color: azure;
+}
+.resbutn{
+    display: grid;
+    grid-template-columns: auto auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.resbutn button{
+    margin-top: 20px;
+    width: 175%;
+    height: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(122, 16, 96);
+    color: azure;
+}
+/* resultant grid */
+.resgrid{
+    display: grid;
+    /* grid-template-rows: 0.7fr 4fr 0.5fr 0.5fr 0.5fr; */
+    grid-template-rows: 60px auto 50px 50px 50px;;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(122, 16, 96);
+    color: white;
+}
+.resgridhead{
+    display: grid;
+    grid-template-columns: auto auto auto;    
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.inhead{
+    margin: auto;
+}
+.inhead1{
+    margin: auto;
+}
+.resgridbody{
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.resgridbody img{
+    /* width: auto;
+    height: auto;
+    min-height: 250px; */
+    width: 100%;
+    min-width: 360px;
+    height: 20rem;
+    min-height: 250px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.accuracyhead{
+    margin: auto;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgb(246, 248, 248);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.accuracygrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+    text-align: center;
+    font-size: 1rem;
+    border-bottom: 1px solid whitesmoke;
+    border-top: 1px solid whitesmoke;
+    background: rgb(252, 250, 251);
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.accuracygrid div{
+    margin: auto 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #ffffff !important;
+}

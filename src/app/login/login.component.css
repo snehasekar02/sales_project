@@ -1,0 +1,87 @@
+.mainappdiv{
+    background: url(https://assets.website-files.com/60e7f71b22c6d0b9cf329ceb/621e1a2f28ded71ee95aeede_6ProvenSalesForecastingMethodstoDriveRevenue1_a117440b5ae227c3dba5264a6521da06_2000.png) no-repeat;
+    height: 100vh;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+.mainDiv{
+    background: rgb(122, 16, 96);
+    /*background-image: url("https://wallpaperaccess.com/full/6160042.jpg");*/
+    height:auto;
+    min-height: 200px;
+    width: 30%;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 5px;
+    position: absolute;
+    left: 33%;
+    top: 30%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.example-container{
+    height: 50%;
+    width: 70%;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.example-container .botDiv{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.example-container .botDiv u{
+    color: yellowgreen;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.example-container input{
+    height: 30px;
+    border:1px solid black;
+    color: rgb(7, 0, 0);
+    border-radius: 3px;
+    background-color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.example-container .error{
+    margin-top: 5px;
+    color: rgb(253, 248, 248);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.example-container span{
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.d-flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mat-form-field{
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mt-top{
+    /* margin-top: 30px; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+.buttondiv{
+    /* margin-top: 30px; */
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.buttondiv button{
+    width: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(92, 99, 100);
+}
+.mt-top-2{
+    /* margin-top: 10px; */
+    font-family: Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,24 @@
+.mainDiv{
+    /* background: hsla(208, 68%, 22%, 0.90); */
+    background: url(https://static.vecteezy.com/system/resources/thumbnails/008/255/803/small/page-not-found-error-404-system-updates-uploading-computing-operation-installation-programs-system-maintenance-a-hand-drawn-layout-template-of-a-broken-robot-illustration-vector.jpgng ) no-repeat; 
+    height:auto;
+    min-height: 200px;
+    width: 30%;
+    color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 5px;
+    position: absolute;
+    left: 30%;
+    top: 30%;
+}
+
+.subdiv{
+    /* background: url(https://png.pngtree.com/png-vector/20210702/ourmid/pngtree-error-404-page-not-found-website-png-image_3545448.jpg); */
+    height:20rem;
+    min-height: 250px;
+    background-position: center;
+}

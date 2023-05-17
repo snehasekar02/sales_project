@@ -1,0 +1,115 @@
+<div class="mainappdiv">  
+<div class="Mainhome">
+    <div class="tophome">
+        <p>Sales Forecasting</p>
+        <div class="logoutdiv">
+        <button matSuffix mat-icon-button (click)="logout()"  matTooltip="Logout" [matTooltipPosition]="'above'">
+            <mat-icon aria-hidden="false">logout</mat-icon>
+        </button></div>         
+    </div>
+    <div [style.display]="showspinner && !showResult ? 'flex' : 'none'" class="container1">
+        <div class="spinergrid">
+            <mat-spinner style="margin:auto" [color]="color"></mat-spinner>            
+            <h2>Predicting..</h2>
+        </div>
+    </div>
+    <div [style.display]="!showspinner && !showResult ? 'flex' : 'none'" class="container" >   
+        <mat-card class="card">
+            <div class="cardgrid">
+                <div class="fileupld">
+                    <mat-form-field floatPlaceholder="never">
+                        <input [hidden]="true"  (change)="onFileSelect($event)" type="file" accept=".csv" #fileSelect>
+                        <input readonly matInput (click)="fileSelect.click();"  [(ngModel)]="filename" placeholder="Select a csv file..."/>
+                        <button *ngIf="this.file" (click)="deleteFile(); fileSelect.value='';" matSuffix matTooltip="Remove selected file"
+                                [matTooltipPosition]="'above'" type="button" color="warn" mat-icon-button>
+                            <mat-icon>close</mat-icon>
+                        </button>
+                        <button matSuffix mat-icon-button (click)="fileSelect.click();"  matTooltip="Select a file" [matTooltipPosition]="'above'">
+                            <mat-icon>file upload</mat-icon>
+                        </button> 
+                    </mat-form-field>      
+                    <button (click)="fileUpload()" mat-flat-button style="background-color: #7a1b7e; color: #ffff; min-height: 40px;">
+                        <span *ngIf="!showLoader">Upload</span>
+                        <mat-spinner style="margin-left: 43%;" diameter="25" strokeWidth="4" *ngIf="showLoader"></mat-spinner>
+                    </button>             
+                </div>
+                
+                    <div class="selectValue">
+                        <label>Select Column </label><br>
+                        <select [(ngModel)]="selectedValue" [disabled]="disables" name="columns">
+                          <option *ngFor="let column of coloumns" [value]="column.value">
+                            {{column.viewValue}}
+                          </option>
+                        </select>
+                    </div>
+                    <div class="periodicity">
+                        <label>Periodicity </label><br>
+                        <select [(ngModel)]="periodicity" [disabled]="disables" name="pcolumns">
+                            <option value="day">Day</option>
+                            <option value="week">Week</option>
+                            <option value="month">Month</option>
+                            <option value="year">Year</option>
+                        </select>
+                    </div>
+                    <div>
+                    <mat-form-field style="width: 100%;" appearance="fill">
+                        <mat-label>Enter No of Day/Month/week/year to Predict</mat-label>
+                            <input [disabled]="disables" formControlName="aNumberField" numberOnly type="number" step="1"
+                            (change)="change($event)" matInput #postalCode maxlength="5">
+                            <!-- <mat-hint>{{postalCode.value.length}}</mat-hint> -->
+                      </mat-form-field>
+                </div>
+                <div class="preditbutn">
+                    <button (click)="submit()" [disabled]="disables" mat-flat-button color="accent">
+                        <span>Predict</span>                        
+                    </button>
+                </div>
+                <br>
+                <div class="resbutn">
+                    <button (click)="result()" [style.display]="showForward ? 'block' : 'none'"  mat-flat-button color="primary">
+                        <span>Result</span>                        
+                    </button>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+    <div [style.display]="showResult ? 'flex' : 'none'" class="rescontainer" >
+        <div class="resgrid">
+            <div class="resgridhead">
+                <div class="inhead">
+                    <button (click)="back()" mat-flat-button color="blue">
+                        <span>Back</span>                        
+                    </button>
+                </div>
+                <div class="inhead1">Result of Forecasting</div>
+                <div class="inhead">
+                    <button (click)="newPredict()"  mat-flat-button color="blue">
+                        <span>New</span>                        
+                    </button>
+                </div>
+            </div>
+            <div class="resgridbody">
+                <img src={{resultantGraph}}  alt="res"/>
+                <!-- <img src={{dummyImage}}  alt="res"/> -->
+            </div>
+            <div class="accuracyhead">
+                Model Validation Metrics
+            </div>
+            <div class="accuracygrid">
+                <div>ADF_Statistic</div>
+                <div>P_Value</div>
+                <div>RMSE</div>
+                <div>MAPE</div>
+            </div>
+            <div class="accuracygrid">
+                <div>{{accurayObj['ADF_Statistic']}}</div>
+                <div>{{accurayObj['p_value']}}</div>
+                <div>{{accurayObj['rmse']}}</div>
+                <div>{{accurayObj['mape']}}</div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+</div>

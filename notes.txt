@@ -1,0 +1,25 @@
+# key = Fernet.generate_key()
+# fernet = Fernet(key)
+# enc = fernet.encrypt(request_data['password'].encode())
+# print(enc)
+# request_data['password'] = enc
+# print(request_data)
+
+
+virtualenv env
+source env/bin/activate
+
+# op=db.db.userCollection.insert_one({
+# "email": "abc3@gmail.com",
+# "name": "JJ",
+# "password": "123456",
+# "token": ""
+# })  
+
+@app.route("/test")
+def creator(user):
+    try:
+        db.db.userCollection.insert_one(user)      
+        return "user created Successfully" 
+    except:
+        return "Server Error Try again later..."
